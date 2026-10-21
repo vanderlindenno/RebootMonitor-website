@@ -39,7 +39,7 @@ A plain static website (HTML, CSS and a little JavaScript), hosted on GitHub Pag
 
 Two GitHub Actions keep search engines up to date after a push that changes pages: one updates `lastmod` in `sitemap.xml`, the other notifies Bing about changed pages.
 
-Found an error on the site? Please [open an issue](https://github.com/vanderlindenno/RebootMonitor/issues). For app questions, use the contact form on the website.
+Found an error on the site? Please [open an issue](https://github.com/vanderlindenno/RebootMonitor-website/issues). For app questions, use the contact form on the website.
 
 ## More apps
 
