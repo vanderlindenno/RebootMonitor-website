@@ -227,7 +227,7 @@ a{color:var(--green)}
 .shot figcaption{font-size:14px;color:var(--muted);margin-top:10px}
 .faq details{border-top:1px solid var(--line);padding:14px 0}
 .faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{font-weight:600;cursor:pointer;color:var(--green-dark)}
+.faq summary{font-weight:600;cursor:pointer;color:var(--green-dark);padding:14px 0;margin:-14px 0}
 .faq p{margin:10px 0 0;max-width:70ch}
 
 .features{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
@@ -247,7 +247,7 @@ a{color:var(--green)}
 .week b{display:block;color:#9a560a;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
 .week span{font-size:15px;color:#5c4423}
 @media (max-width:900px){.intro-grid,.has-phones{grid-template-columns:1fr}.has-phones .phones{justify-content:center}}
-.hero .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin:24px 0 0;max-width:none;font-size:16px;opacity:1}.btn-light{background:#fff;color:var(--green-dark)}.btn-light:hover{background:var(--green-soft)}.hero-note{opacity:.95}@media (max-width:600px){.hero .hero-cta{margin-top:20px}}.topnav{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:2px;background:#004a1f;padding:0 10px;overflow-x:auto;white-space:nowrap;line-height:1.2}.topnav a{color:#fff;text-decoration:none;padding:14px 12px;font-weight:600;font-size:15px;flex:none;display:inline-block}.topnav a:hover{background:#0b6a30}.topnav .brand{font-weight:800;margin-right:8px}[id]{scroll-margin-top:64px}table{width:100%;border-collapse:collapse;margin-top:10px;min-width:560px}table th,table td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line);font-size:15px}table th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.04em}.steps h3{margin:0 0 4px}@media (min-width:900px){.features{grid-template-columns:repeat(3,minmax(0,1fr))}}</style>
+.hero .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin:24px 0 0;max-width:none;font-size:16px;opacity:1}.btn-light{background:#fff;color:var(--green-dark)}.btn-light:hover{background:var(--green-soft)}.hero-note{opacity:.95}@media (max-width:600px){.hero .hero-cta{margin-top:20px}}.topnav{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:2px;background:#004a1f;padding:0 10px;overflow-x:auto;white-space:nowrap;line-height:1.2}.topnav a{color:#fff;text-decoration:none;padding:14px 12px;font-weight:600;font-size:15px;flex:none;display:inline-block}.topnav a:hover{background:#0b6a30}.topnav .brand{font-weight:800;margin-right:8px}[id]{scroll-margin-top:64px}table{width:100%;border-collapse:collapse;margin-top:10px;min-width:560px}table th,table td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line);font-size:15px}table th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.04em}.steps h3{margin:0 0 4px}@media (min-width:900px){.features{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (max-width:640px){table.stack{min-width:0}table.stack thead{position:absolute;left:-9999px}table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%;box-sizing:border-box}table.stack tr{border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:0 0 12px;background:#fff}table.stack td{border:0;padding:6px 0}table.stack td:first-child{font-size:17px;padding-bottom:2px}table.stack td[data-label]::before{content:attr(data-label);display:block;color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}}</style>
 </head>
 <body>
 
@@ -367,12 +367,12 @@ a{color:var(--green)}
 <section class="card" aria-labelledby="tools">
   <h2 id="tools">Management, launcher and monitoring are different jobs</h2>
   <p class="lead">Use each component for what it is designed to do.</p>
-  <div style="overflow-x:auto"><table>
+  <div style="overflow-x:auto"><table class="stack">
     <thead><tr><th>Component</th><th>Primary purpose</th><th>What it does not replace</th></tr></thead>
     <tbody>
-    <tr><td><strong>Microsoft Intune</strong></td><td>Enrollment, app deployment, configuration policies and supported management and compliance reporting.</td><td>It does not guarantee that every diagnostic detail is available for every device.</td></tr>
-    <tr><td><strong>Managed Home Screen</strong></td><td>Controlled launcher experience for approved apps in supported kiosk scenarios.</td><td>It is not a standalone security boundary; pair it with suitable device restrictions and testing.</td></tr>
-    <tr><td><strong>RebootMonitor</strong></td><td>Tracks Android uptime and reboot history on the device.</td><td>It does not enroll, configure, secure or remotely manage a fleet like Intune.</td></tr>
+    <tr><td><strong>Microsoft Intune</strong></td><td data-label="Primary purpose">Enrollment, app deployment, configuration policies and supported management and compliance reporting.</td><td data-label="What it does not replace">It does not guarantee that every diagnostic detail is available for every device.</td></tr>
+    <tr><td><strong>Managed Home Screen</strong></td><td data-label="Primary purpose">Controlled launcher experience for approved apps in supported kiosk scenarios.</td><td data-label="What it does not replace">It is not a standalone security boundary; pair it with suitable device restrictions and testing.</td></tr>
+    <tr><td><strong>RebootMonitor</strong></td><td data-label="Primary purpose">Tracks Android uptime and reboot history on the device.</td><td data-label="What it does not replace">It does not enroll, configure, secure or remotely manage a fleet like Intune.</td></tr>
     </tbody>
   </table></div>
 </section>
