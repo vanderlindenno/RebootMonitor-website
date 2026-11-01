@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rebootmonitor.com/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-01</lastmod>
   </url>
   <url>
     <loc>https://rebootmonitor.com/privacy.html</loc>
@@ -54,4 +54,13 @@
   </url>
   <url><loc>https://rebootmonitor.com/how-often-restart-android-phone.html</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://rebootmonitor.com/android-multi-app-kiosk-intune.html</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://rebootmonitor.com/ar/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/de/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/es/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/fr/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/hi/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/nl/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/no/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/pl/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://rebootmonitor.com/zh/</loc><lastmod>2026-11-01</lastmod></url>
 </urlset>
