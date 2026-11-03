@@ -49,7 +49,7 @@
       "mainEntityOfPage": "https://rebootmonitor.com/intune-shared-devices.html",
       "inLanguage": "en",
       "datePublished": "2026-09-29",
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "author": {
         "@id": "https://rebootmonitor.com/#organization"
       },
@@ -151,10 +151,10 @@
         },
         {
           "@type": "Question",
-          "name": "Can Intune allow notifications for RebootMonitor so users are not asked?",
+          "name": "Can I configure RebootMonitor from Intune?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, on Android 13 and later. The simplest way is to add Post notifications under Permissions in the RebootMonitor app configuration policy and set it to Auto grant, which applies to this app only. Alternatively, set Default permission policy to Auto grant in a device restrictions profile, which applies to all apps in the work profile. Android then grants the notification permission the first time RebootMonitor asks for it, without a prompt."
+            "text": "Yes. An app configuration policy can set the reboot reminder (on or off, 3, 7 or 14 days) for every device and grant the notification permission. With a license key it can also hide the settings and website buttons. See the configuration guide."
           }
         },
         {
@@ -195,30 +195,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. Individual Android users can use it to see when their device was last restarted. The shared-device and Intune use case is simply where the usual sense of ownership is missing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I set the reboot reminder from Intune?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. From version 1.21 an app configuration policy can turn the reminder on or off and set it to 3, 7 or 14 days for every device. Users then see the value that applies, greyed out in Settings, under the note that their organization manages it. The settings are read on the device, so no extra permission or network connection is needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does the license key do, and what stays free?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The reminder settings and the whole app are free. A license key is only needed to hide the settings button and the website button with an app configuration policy. A valid key also shows your organization's name in the information screen, in place of the donation link. Without a valid key the two hide settings do nothing and the buttons stay visible."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I get a license key, and what does it cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use the contact form on the home page and tell us the name of your organization and roughly how many devices you manage. The price depends on the number of devices and is given on request. The key is one-time, has no end date and is checked offline in the app, so no data is sent anywhere. Paste it into the License key setting of the app configuration policy."
           }
         }
       ]
@@ -460,109 +436,23 @@ a{color:var(--green)}
     <li><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><h3>Add the app</h3><p>In the Intune admin center, go to <em>Apps › Android › Add › Managed Google Play app</em> and approve RebootMonitor. Package name: <code>app.rebootmonitor.mobile</code>.</p></li>
     <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Assign it</h3><p>Assign the app as <em>Required</em> to the device group that holds the shared devices.</p></li>
     <li><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><h3>Add it to MHS</h3><p>Add the app to the allowed apps in the dedicated device profile (multi-app kiosk) or the MHS app configuration policy.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Allow notifications</h3><p>Keep the notification bar available in MHS, so users actually see the reminder. On Android 13 and later, also let Intune grant the notification permission so users are not asked for it. <a href="#notifications">See how below.</a></p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Allow notifications</h3><p>Keep the notification bar available in MHS, so users actually see the reminder. On Android 13 and later, also let Intune grant the notification permission so users are not asked for it. <a href="intune-app-configuration.html#notifications">See how.</a></p></li>
     <li><svg class="icon" aria-hidden="true"><use href="#i-phone-check"/></svg><h3>Verify</h3><p>Open the app on a test device, check the uptime and reboot once. The reboot should appear in the overview right away.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Set the reminder centrally (optional)</h3><p>An app configuration policy can set the reminder for every device and, with a license key, hide the settings. <a href="#configure">See the configuration section below.</a></p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Set the reminder centrally (optional)</h3><p>An app configuration policy can set the reminder for every device and, with a license key, hide the settings. <a href="intune-app-configuration.html">See the configuration guide.</a></p></li>
     <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><h3>Check battery optimization if needed</h3><p>Most devices deliver the reminder fine on default battery settings. If a reminder doesn't show up on a particular device, users can check the shortcut in the app's settings (our <a href="https://rebootmonitor.com/fix-delayed-reminders.html">step-by-step guide</a> shows exactly what to tap), or, on Samsung devices, an admin can manage that setting fleet-wide through Intune using the <strong>Samsung Knox Service Plugin</strong> (OEMConfig) instead of relying on each device.</p></li>
   </ol>
   <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p>Without step 3 the app is installed but invisible. Reminders only start after the chosen interval (7 days by default) has passed since installation, so don't expect notifications right after the rollout.</p></div>
 </section>
 
 <section class="card" aria-labelledby="configure">
-  <h2 id="configure">Configure RebootMonitor from Intune</h2>
-  <p class="lead">From version 1.21 an app configuration policy sets the reboot reminder on every device from one place. With a license key (from version 1.22) it can also hide the settings button and the website button, and show your organization's name in the app.</p>
-  <p style="max-width:70ch">The app reads the policy on the device, without any extra permission or network connection, and nothing leaves the device. Without a policy the app works exactly as before.</p>
-  <figure class="cfg-shot">
-    <picture><source srcset="intune-app-configuration.webp" type="image/webp"><img src="intune-app-configuration.png" width="776" height="528" alt="An Intune app configuration policy for RebootMonitor: the Post notifications permission set to Auto grant, and the configuration keys License key, Hide website button, Hide settings, Days until a reboot is recommended and Reboot reminder" loading="lazy" decoding="async"></picture>
-    <figcaption>An app configuration policy in Intune: the notification permission and the five RebootMonitor settings.</figcaption>
-  </figure>
-
-  <h3 style="margin:28px 0 0">What each setting does</h3>
-  <div style="overflow-x:auto"><table class="stack">
-    <thead><tr><th>Setting</th><th>What it does</th><th>License key</th></tr></thead>
-    <tbody>
-    <tr><td><strong>Reboot reminder</strong><br><code>reminder_enabled</code> &middot; true / false &middot; default true</td><td data-label="What it does">Turns the reminder on or off. Off means no notification, no badge and no pop-up; the status then still counts 7 days.</td><td data-label="License key"><span class="tag free">Not needed</span></td></tr>
-    <tr><td><strong>Days until a reboot is recommended</strong><br><code>reminder_days</code> &middot; choice 3, 7 or 14 &middot; default 7</td><td data-label="What it does">How long a device may run before its status changes and the reminder appears. The status, the overview, the notification, the pop-up and the widget all follow this value.</td><td data-label="License key"><span class="tag free">Not needed</span></td></tr>
-    <tr><td><strong>License key</strong><br><code>license_key</code> &middot; text</td><td data-label="What it does">Your organization's license key. It switches on the two hide settings below and shows your organization's name in the information screen, in place of the donation link. It is not needed for anything else.</td><td data-label="License key">&mdash;</td></tr>
-    <tr><td><strong>Hide settings</strong><br><code>hide_settings</code> &middot; true / false &middot; default false</td><td data-label="What it does">Removes the settings button in the app and on the homescreen widget, so users cannot open Settings. The battery optimization shortcut and the widget option are hidden with it.</td><td data-label="License key"><span class="tag lic">Needs a license key</span></td></tr>
-    <tr><td><strong>Hide website button</strong><br><code>hide_website</code> &middot; true / false &middot; default false</td><td data-label="What it does">Removes the &ldquo;Visit website&rdquo; button from the information (i) screen. The (i) button itself stays.</td><td data-label="License key"><span class="tag lic">Needs a license key</span></td></tr>
-    </tbody>
-  </table></div>
-
-  <h3 style="margin:28px 0 8px">What the user sees</h3>
+  <h2 id="configure">Optional: configure RebootMonitor from Intune</h2>
+  <p class="lead">An app configuration policy sets the reboot reminder on every device from one place. It can also grant the notification permission automatically and, with a license key, hide the settings and website buttons.</p>
   <ul class="check-list">
-    <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span>When the reminder is set by policy, the reminder choices in Settings show the value that applies but are greyed out, under the note &ldquo;Managed by your organisation&rdquo;. A setting you leave out gets the app default (on, 7 days).</span></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-routine"/></svg><span>The user's own choice stays saved and returns if you remove the policy. A change in Intune applies at once while the app is open, and otherwise the next time it is opened.</span></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Without a valid license key, <em>Hide settings</em> and <em>Hide website button</em> do nothing: the buttons stay, and Settings says why. The reminder settings work either way.</span></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span>With a valid license key the information screen shows your organization's name in place of the donation link.</span></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><span>Turn the reminder on or off and choose 3, 7 or 14 days for all devices.</span></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Let Intune grant the notification permission, so users are not asked.</span></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span>With a license key: hide the settings button and the website button.</span></li>
   </ul>
-
-  <h3 style="margin:28px 0 8px">Set it up in Intune</h3>
-  <ol class="steps">
-    <li><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><h3>Create the policy</h3><p>Go to <em>Apps › App configuration policies › Add › Managed devices</em>. Platform: Android Enterprise. Profile type: Fully Managed, Dedicated and Corporate-Owned Work Profile (for shared devices and kiosks), or Personal Work Profile.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Pick the app</h3><p>Targeted app: RebootMonitor.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Grant notifications (optional)</h3><p>Under <em>Permissions</em> choose <em>Add</em>, pick <em>Post notifications</em> and set it to <strong>Auto grant</strong>. <a href="#notifications">More below.</a></p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><h3>Add the settings</h3><p>Choose <em>Use configuration designer</em> and add the settings you want, or choose <em>Enter JSON data</em> and paste the example below.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><h3>Assign it</h3><p>Assign the policy to the same device group as the app.</p></li>
-  </ol>
-  <pre><code>{
-  "kind": "androidenterprise#managedConfiguration",
-  "productId": "app:app.rebootmonitor.mobile",
-  "managedProperty": [
-    { "key": "reminder_enabled", "valueBool": true },
-    { "key": "reminder_days", "valueString": "7" },
-    { "key": "license_key", "valueString": "RM1.&hellip;your license key&hellip;" },
-    { "key": "hide_settings", "valueBool": true },
-    { "key": "hide_website", "valueBool": true }
-  ]
-}</code></pre>
-  <p style="margin:12px 0 0;font-size:15px;color:var(--muted)">Menu names can differ a little between Intune versions. Leave out <code>license_key</code>, <code>hide_settings</code> and <code>hide_website</code> if you only want to set the reminder.</p>
-
-  <h3 id="notifications" style="margin:28px 0 8px">Let Intune allow notifications</h3>
-  <p style="max-width:70ch">The reminder is a notification. From Android 13 an app has to ask the user for permission to show notifications, and a user can say no. On managed devices you can grant that permission centrally, so the user is not asked and a reminder cannot be missed because of a refused prompt. There are two ways.</p>
-  <p style="max-width:70ch"><strong>Option 1: for RebootMonitor only (recommended).</strong> In the app configuration policy above, add <em>Post notifications</em> under <em>Permissions</em> and set it to <em>Auto grant</em>. A permission granted there overrides the default permission policy and applies to this app only.</p>
-  <p style="max-width:70ch"><strong>Option 2: for all apps.</strong> A device restrictions profile can set the default permission policy for every app in the work profile:</p>
-  <figure class="cfg-shot">
-    <picture><source srcset="intune-permission-policy.webp" type="image/webp"><img src="intune-permission-policy.png" width="720" height="212" alt="Intune device restrictions profile with Default permission policy set to Auto grant, and System notifications and information set to show in the device's status bar" loading="lazy" decoding="async"></picture>
-    <figcaption>Device restrictions profile: <em>Default permission policy</em> on Auto grant, and system notifications shown in the status bar.</figcaption>
-  </figure>
-  <ol class="steps">
-    <li><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><h3>Create a profile</h3><p>Go to <em>Devices › Configuration › Create</em>. Platform: Android Enterprise. Profile type: <em>Device restrictions</em>, under Fully Managed, Dedicated and Corporate-Owned Work Profile (or Personal Work Profile).</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><h3>Auto grant permissions</h3><p>Under <em>General</em>, set <em>Default permission policy</em> to <strong>Auto grant</strong>. Android then grants the permissions an app asks for without showing the prompt, including notifications.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Show system notifications</h3><p>Set <em>System notifications and information</em> to show them in the device's status bar. On a kiosk with Managed Home Screen, also keep the notification bar available there.</p></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Assign it</h3><p>Assign the profile to the same device group as the app, and test it on one device first.</p></li>
-  </ol>
-  <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>Good to know.</strong> The permission is granted the first time the app asks for it, so open the app once after the profile arrives. A user who already refused notifications earlier is not overruled by this setting: reinstall the app or reset that device. With option 2, <em>Default permission policy</em> applies to all apps in the work profile, not only RebootMonitor. Before Android 13 notifications are on by default and nothing is needed.</p></div>
-</section>
-
-<div class="two-col" id="license">
-  <section class="card" aria-labelledby="free">
-    <h2 id="free">What is free</h2>
-    <ul class="check-list">
-      <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>The app itself: reboot tracking, uptime, history, heatmap, reminder and widget. No account, no ads.</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Setting the reminder from Intune: <em>Reboot reminder</em> and <em>Days until a reboot is recommended</em>.</span></li>
-    </ul>
-  </section>
-  <section class="card" aria-labelledby="licensed">
-    <h2 id="licensed">What needs a license key</h2>
-    <ul class="check-list">
-      <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><em>Hide settings</em>: no settings button for users.</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><em>Hide website button</em>: no &ldquo;Visit website&rdquo; button in the information screen.</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span>Your organization's name in the information screen, in place of the donation link.</span></li>
-    </ul>
-  </section>
-</div>
-
-<section class="card" aria-labelledby="licensekey">
-  <h2 id="licensekey">About the license key</h2>
-  <ul class="check-list">
-    <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>One license per organization, with no end date: it does not expire. The price depends on the number of devices and is given on request.</span></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span>The key carries your organization's name, not a list of devices, and is checked offline inside the app. There is no license server and no data is sent.</span></li>
-    <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><span>You paste the key into the <em>License key</em> setting of the policy. If the key is missing or wrong, the two hide settings simply have no effect.</span></li>
-  </ul>
-  <p style="margin:18px 0 6px"><strong>Price on request.</strong> The price depends on the number of devices. Use the contact form on the home page and tell us the name of your organization and roughly how many devices you manage. We reply with a quote, and send you the key to paste into the policy once the license is arranged.</p>
-  <p style="margin:12px 0 0"><a class="btn" href="https://rebootmonitor.com/#contact">Request a quote</a></p>
-  <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p><strong>If you hide the settings, manage battery optimization from the device side.</strong> Users can no longer open the battery optimization shortcut from the app. On Samsung devices, deploy the <strong>Samsung Knox Service Plugin</strong> (OEMConfig) through Intune and use its battery optimization settings to exempt RebootMonitor (package <code>app.rebootmonitor.mobile</code>) across the whole fleet. For other brands, use the manufacturer's OEMConfig app where it offers such a setting. That way background reminders stay reliable without any action from the user.</p></div>
+  <p style="margin:20px 0 0"><a class="btn" href="intune-app-configuration.html">Read the configuration guide</a></p>
 </section>
 
 <section class="card" aria-labelledby="tips">
@@ -591,10 +481,7 @@ a{color:var(--green)}
   <details><summary>Does RebootMonitor send any data to a server?</summary><p>No. All reboot history is stored locally on the device. The app only uses the RECEIVE_BOOT_COMPLETED and POST_NOTIFICATIONS permissions.</p></details>
   <details><summary>When does the reboot reminder appear?</summary><p>By default, when the device has not been restarted for 7 days. That interval can be changed to 3 or 14 days, or turned off, from the app's settings menu, or by an administrator with an Intune app configuration policy. The reminder clears itself after the next reboot and stays silent during the first reminder period after installation. A shortcut to the device's battery optimization settings is also included, in case a reminder ever doesn't arrive as expected.</p></details>
   <details><summary>Can battery optimization be managed centrally instead of per device?</summary><p>On Samsung devices, yes. Deploy the Samsung Knox Service Plugin as an OEMConfig app through Intune and use its settings to exempt RebootMonitor from battery optimization across the whole fleet, instead of relying on the in-app shortcut on every device. This is especially useful when you hide the app's settings button with a policy, because users can then no longer open the in-app shortcut.</p></details>
-  <details><summary>Can I set the reboot reminder from Intune?</summary><p>Yes. From version 1.21 an app configuration policy can turn the reminder on or off and set it to 3, 7 or 14 days for every device. Users then see the value that applies, greyed out in Settings, under the note that their organization manages it. The settings are read on the device, so no extra permission or network connection is needed.</p></details>
-  <details><summary>What does the license key do, and what stays free?</summary><p>The reminder settings and the whole app are free. A license key is only needed to hide the settings button and the website button with an app configuration policy. A valid key also shows your organization's name in the information screen, in place of the donation link. Without a valid key the two hide settings do nothing and the buttons stay visible.</p></details>
-  <details><summary>How do I get a license key, and what does it cost?</summary><p>Use the contact form on the home page and tell us the name of your organization and roughly how many devices you manage. The price depends on the number of devices and is given on request. The key is one-time, has no end date and is checked offline in the app, so no data is sent anywhere. Paste it into the License key setting of the app configuration policy.</p></details>
-  <details><summary>Can Intune allow notifications for RebootMonitor so users are not asked?</summary><p>Yes, on Android 13 and later. The simplest way is to add Post notifications under Permissions in the RebootMonitor app configuration policy and set it to Auto grant, which applies to this app only. Alternatively, set Default permission policy to Auto grant in a device restrictions profile, which applies to all apps in the work profile. Android then grants the notification permission the first time RebootMonitor asks for it, without a prompt. <a href="#notifications">See the steps.</a></p></details>
+  <details><summary>Can I configure RebootMonitor from Intune?</summary><p>Yes. An app configuration policy can set the reboot reminder (on or off, 3, 7 or 14 days) for every device and grant the notification permission. With a license key it can also hide the settings and website buttons. <a href="intune-app-configuration.html">See the configuration guide.</a></p></details>
   <details><summary>Does RebootMonitor replace Microsoft Intune?</summary><p>No. RebootMonitor is not an MDM solution. Intune stays responsible for enrollment, configuration, apps, policies and management. RebootMonitor focuses only on reboot and uptime visibility.</p></details>
   <details><summary>Does RebootMonitor need a connection to Intune?</summary><p>No. It is a normal Android app that tracks restarts on its own. It can be deployed alongside your other apps through your existing Android management setup, and it also works on devices outside an enterprise environment. If you use an app configuration policy, the app only reads it on the device and never contacts Intune.</p></details>
   <details><summary>Can IT administrators see the reboot history remotely?</summary><p>No. The history is stored locally on the device. RebootMonitor provides local visibility and reminders rather than a central cloud dashboard for all devices.</p></details>
@@ -605,12 +492,9 @@ a{color:var(--green)}
 <section class="card" aria-labelledby="related">
   <h2 id="related">Related reading</h2>
   <ul class="related-list">
-    <li><a href="android-reboot-notification.html">Android Reboot Notification</a> — a closer look at how the configurable reminder works, for one phone or a whole fleet.</li>
-    <li><a href="intune-shared-device-monitoring.html">Android Reboot Monitoring for Microsoft Intune</a> — the decentralized monitoring model behind this approach.</li>
-    <li><a href="android-kiosk-monitoring.html">Android Kiosk Monitoring</a> — the same idea applied to single-purpose kiosks.</li>
-    <li><a href="check-last-reboot-android.html">How to check when your Android phone was last restarted</a> — three ways, from settings to automatic tracking.</li>
-    <li><a href="does-android-keep-reboot-history.html">Does Android keep a reboot history?</a> — what Android records, and what it doesn't.</li>
     <li><a href="android-multi-app-kiosk-intune.html">Android multi-app kiosk with Intune</a> — a setup guide for Managed Home Screen.</li>
+    <li><a href="intune-shared-device-monitoring.html">Android Reboot Monitoring for Microsoft Intune</a> — monitoring reboot health across a managed fleet.</li>
+    <li><a href="android-kiosk-monitoring.html">Android Kiosk Monitoring</a> — keeping unattended kiosks and signage stable.</li>
   </ul>
 </section>
 

@@ -242,6 +242,7 @@
 <ul class="path-links">
 <li><a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en" lang="en">Deployment guide: Microsoft Intune and Managed Home Screen</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span></li>
 <li><a href="https://rebootmonitor.com/intune-shared-device-monitoring.html" hreflang="en" lang="en">Reboot monitoring for shared device fleets</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span></li>
+<li><a href="https://rebootmonitor.com/intune-app-configuration.html" hreflang="en" lang="en">Configure RebootMonitor with an Intune policy</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span></li>
 <li><a href="https://rebootmonitor.com/android-multi-app-kiosk-intune.html" hreflang="en" lang="en">Setup guide: Android multi-app kiosk with Intune</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span></li>
 </ul>
 </div>
@@ -285,7 +286,7 @@
 <div class="screens">
 <picture><source srcset="/screenshot1.webp" type="image/webp"><img src="/screenshot1.png" width="525" height="1167" alt="Panel RebootMonitor ze statusem, aktualnym czasem pracy, dniami z restartami i godzinami restartów z ostatnich 7 dni" loading="lazy" decoding="async"></picture>
 <picture><source srcset="/screenshot2.webp" type="image/webp"><img src="/screenshot2.png" width="525" height="1167" alt="Historia restartów w RebootMonitor z podsumowaniem, miesięczną kalendarzową mapą cieplną restartów dziennie i podsumowaniem miesięcznym" loading="lazy" decoding="async"></picture>
-<picture><source srcset="/screenshot_settings_row.webp" type="image/webp"><img src="/screenshot_settings_row.png" width="525" height="1167" alt="Ustawienia RebootMonitor z konfigurowalnym przypomnieniem o restarcie, skrótem do optymalizacji baterii i opcją dodania widżetu na ekran główny" loading="lazy" decoding="async"></picture>
+<picture><source srcset="/screenshot3.webp" type="image/webp"><img src="/screenshot3.png" width="525" height="1167" alt="Ustawienia RebootMonitor z konfigurowalnym przypomnieniem o restarcie, skrótem do optymalizacji baterii i opcją dodania widżetu na ekran główny" loading="lazy" decoding="async"></picture>
 </div>
 </section>
 
@@ -316,11 +317,6 @@
 </div>
 </section>
 
-<section class="card" aria-labelledby="mdm">
-<h2 id="mdm">Stworzona dla urządzeń współdzielonych i środowisk MDM</h2>
-<p>RebootMonitor jest przeznaczony dla współdzielonych urządzeń z Androidem zarządzanych przez rozwiązania MDM, takie jak Microsoft Intune. Użytkownicy widzą, kiedy urządzenie było ostatnio restartowane, i mogą otrzymywać opcjonalne przypomnienie &mdash; domyślnie co 7 dni, albo co 3 lub 14 dni, albo wyłączone. Równie dobrze sprawdza się na prywatnym telefonie. <a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en">Poradnik dla Intune</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> wyjaśnia, jak go wdrożyć.</p>
-</section>
-
 <section class="card" aria-labelledby="faq">
 <h2 id="faq">Najczęstsze pytania</h2>
 <details><summary>Jak sprawdzić, kiedy mój telefon z Androidem był ostatnio restartowany?</summary><p>Otwórz RebootMonitor: panel pokazuje godzinę ostatniego restartu i to, od jak dawna urządzenie działa. Każdy restart jest zapisywany automatycznie, więc dostajesz też pełną historię i miesięczną mapę cieplną. Inne sposoby opisujemy w naszym <a href="https://rebootmonitor.com/check-last-reboot-android.html" hreflang="en">poradniku o sprawdzaniu ostatniego restartu Androida</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span>.</p></details>
@@ -340,14 +336,8 @@
 <li><a href="https://rebootmonitor.com/android-reboot-tracking.html" hreflang="en" lang="en">Android Reboot Tracker</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — jak każdy restart jest zapisywany automatycznie.</li>
 <li><a href="https://rebootmonitor.com/android-uptime-monitoring.html" hreflang="en" lang="en">Android Uptime Tracker</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — śledzenie czasu pracy na żywo, bezpośrednio na urządzeniu.</li>
 <li><a href="https://rebootmonitor.com/android-device-uptime-report.html" hreflang="en" lang="en">Android Reboot History &amp; Uptime Report</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — jak czytać pełną historię i mapę cieplną.</li>
-<li><a href="https://rebootmonitor.com/check-last-reboot-android.html" hreflang="en" lang="en">How to check when your Android phone was last restarted</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — trzy sposoby, od ustawień po automatyczne śledzenie.</li>
-<li><a href="https://rebootmonitor.com/does-android-keep-reboot-history.html" hreflang="en" lang="en">Does Android keep a reboot history?</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — co Android zapisuje, a czego nie.</li>
-<li><a href="https://rebootmonitor.com/how-often-restart-android-phone.html" hreflang="en" lang="en">How often should you restart an Android phone?</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — prosta rutyna, która działa.</li>
 <li><a href="https://rebootmonitor.com/android-reboot-notification.html" hreflang="en" lang="en">Android Reboot Notification</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — jak działa konfigurowalne przypomnienie co 3, 7 lub 14 dni, zarówno na prywatnych telefonach, jak i we flotach MDM.</li>
 <li><a href="https://rebootmonitor.com/android-kiosk-monitoring.html" hreflang="en" lang="en">Android Kiosk Monitoring</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — utrzymanie stabilności kiosków i oznakowania cyfrowego bez nadzoru.</li>
-<li><a href="https://rebootmonitor.com/android-multi-app-kiosk-intune.html" hreflang="en" lang="en">Android multi-app kiosk with Intune</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — poradnik konfiguracji Managed Home Screen.</li>
-<li><a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en" lang="en">RebootMonitor with Microsoft Intune</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — wdrażanie na urządzeniach współdzielonych z Managed Home Screen.</li>
-<li><a href="https://rebootmonitor.com/intune-shared-device-monitoring.html" hreflang="en" lang="en">Android Reboot Monitoring for Microsoft Intune</a><span class="en" lang="en" title="Strona w języku angielskim">EN</span> — monitorowanie stanu restartów w zarządzanej flocie.</li>
 </ul>
 </section>
 

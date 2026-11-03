@@ -242,6 +242,7 @@
 <ul class="path-links">
 <li><a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en" lang="en">Deployment guide: Microsoft Intune and Managed Home Screen</a><span class="en" lang="en" title="英文页面">EN</span></li>
 <li><a href="https://rebootmonitor.com/intune-shared-device-monitoring.html" hreflang="en" lang="en">Reboot monitoring for shared device fleets</a><span class="en" lang="en" title="英文页面">EN</span></li>
+<li><a href="https://rebootmonitor.com/intune-app-configuration.html" hreflang="en" lang="en">Configure RebootMonitor with an Intune policy</a><span class="en" lang="en" title="英文页面">EN</span></li>
 <li><a href="https://rebootmonitor.com/android-multi-app-kiosk-intune.html" hreflang="en" lang="en">Setup guide: Android multi-app kiosk with Intune</a><span class="en" lang="en" title="英文页面">EN</span></li>
 </ul>
 </div>
@@ -285,7 +286,7 @@
 <div class="screens">
 <picture><source srcset="/screenshot1.webp" type="image/webp"><img src="/screenshot1.png" width="525" height="1167" alt="RebootMonitor 仪表盘，显示状态、当前运行时间、有重启的天数以及最近 7 天的重启时间" loading="lazy" decoding="async"></picture>
 <picture><source srcset="/screenshot2.webp" type="image/webp"><img src="/screenshot2.png" width="525" height="1167" alt="RebootMonitor 重启历史，包含摘要、按天显示重启次数的月度日历热力图和月度概览" loading="lazy" decoding="async"></picture>
-<picture><source srcset="/screenshot_settings_row.webp" type="image/webp"><img src="/screenshot_settings_row.png" width="525" height="1167" alt="RebootMonitor 设置界面，包含可配置的重启提醒、电池优化快捷入口，以及添加主屏幕小组件的选项" loading="lazy" decoding="async"></picture>
+<picture><source srcset="/screenshot3.webp" type="image/webp"><img src="/screenshot3.png" width="525" height="1167" alt="RebootMonitor 设置界面，包含可配置的重启提醒、电池优化快捷入口，以及添加主屏幕小组件的选项" loading="lazy" decoding="async"></picture>
 </div>
 </section>
 
@@ -316,11 +317,6 @@
 </div>
 </section>
 
-<section class="card" aria-labelledby="mdm">
-<h2 id="mdm">专为共享设备和 MDM 环境打造</h2>
-<p>RebootMonitor 专为通过 Microsoft Intune 等 MDM 方案管理的共享 Android 设备而设计。用户可以看到设备上次重启的时间，并可获得可选的提醒 &mdash; 默认 7 天，也可选择 3 天或 14 天，或者关闭。它在个人手机上同样好用。<a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en">Intune 指南</a><span class="en" lang="en" title="英文页面">EN</span>介绍了如何部署。</p>
-</section>
-
 <section class="card" aria-labelledby="faq">
 <h2 id="faq">常见问题</h2>
 <details><summary>如何查看我的 Android 手机上次是什么时候重启的？</summary><p>打开 RebootMonitor：仪表盘会显示上次重启的时间以及设备已运行多久。每次重启都会自动记录，因此您还能看到完整的历史和月度热力图。其他方法请参阅我们的<a href="https://rebootmonitor.com/check-last-reboot-android.html" hreflang="en">如何查看 Android 上次重启时间的指南</a><span class="en" lang="en" title="英文页面">EN</span>。</p></details>
@@ -340,14 +336,8 @@
 <li><a href="https://rebootmonitor.com/android-reboot-tracking.html" hreflang="en" lang="en">Android Reboot Tracker</a><span class="en" lang="en" title="英文页面">EN</span> — 每次重启如何被自动记录。</li>
 <li><a href="https://rebootmonitor.com/android-uptime-monitoring.html" hreflang="en" lang="en">Android Uptime Tracker</a><span class="en" lang="en" title="英文页面">EN</span> — 直接在设备上实时跟踪运行时间。</li>
 <li><a href="https://rebootmonitor.com/android-device-uptime-report.html" hreflang="en" lang="en">Android Reboot History &amp; Uptime Report</a><span class="en" lang="en" title="英文页面">EN</span> — 查看完整历史和热力图。</li>
-<li><a href="https://rebootmonitor.com/check-last-reboot-android.html" hreflang="en" lang="en">How to check when your Android phone was last restarted</a><span class="en" lang="en" title="英文页面">EN</span> — 三种方法，从设置到自动跟踪。</li>
-<li><a href="https://rebootmonitor.com/does-android-keep-reboot-history.html" hreflang="en" lang="en">Does Android keep a reboot history?</a><span class="en" lang="en" title="英文页面">EN</span> — Android 会记录什么，不会记录什么。</li>
-<li><a href="https://rebootmonitor.com/how-often-restart-android-phone.html" hreflang="en" lang="en">How often should you restart an Android phone?</a><span class="en" lang="en" title="英文页面">EN</span> — 一套简单而有效的习惯。</li>
 <li><a href="https://rebootmonitor.com/android-reboot-notification.html" hreflang="en" lang="en">Android Reboot Notification</a><span class="en" lang="en" title="英文页面">EN</span> — 可配置的 3/7/14 天提醒如何工作，个人手机和 MDM 设备群均适用。</li>
 <li><a href="https://rebootmonitor.com/android-kiosk-monitoring.html" hreflang="en" lang="en">Android Kiosk Monitoring</a><span class="en" lang="en" title="英文页面">EN</span> — 让无人看管的展示终端和电子标牌保持稳定。</li>
-<li><a href="https://rebootmonitor.com/android-multi-app-kiosk-intune.html" hreflang="en" lang="en">Android multi-app kiosk with Intune</a><span class="en" lang="en" title="英文页面">EN</span> — Managed Home Screen 设置指南。</li>
-<li><a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en" lang="en">RebootMonitor with Microsoft Intune</a><span class="en" lang="en" title="英文页面">EN</span> — 借助 Managed Home Screen 部署到共享设备。</li>
-<li><a href="https://rebootmonitor.com/intune-shared-device-monitoring.html" hreflang="en" lang="en">Android Reboot Monitoring for Microsoft Intune</a><span class="en" lang="en" title="英文页面">EN</span> — 监测整个受管设备群的重启健康状况。</li>
 </ul>
 </section>
 

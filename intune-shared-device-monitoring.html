@@ -291,7 +291,7 @@ a{color:var(--green)}
 
 <section class="features" aria-label="What monitoring looks like with RebootMonitor">
   <div class="card feature"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg><h3>Visible on the device</h3><p>Anyone picking up the device sees its current status and uptime immediately, no admin console required.</p></div>
-  <div class="card feature"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>A configurable nudge</h3><p>A notification and in-app popup appear once a device has gone too long without a restart &mdash; 7 days by default, adjustable to 3 or 14 days, or off. A battery optimization shortcut is built in for the rare device where a reminder doesn't come through. Administrators can also <a href="intune-shared-devices.html#configure">set the reminder centrally with an Intune app configuration policy</a>.</p></div>
+  <div class="card feature"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>A configurable nudge</h3><p>A notification and in-app popup appear once a device has gone too long without a restart &mdash; 7 days by default, adjustable to 3 or 14 days, or off. A battery optimization shortcut is built in for the rare device where a reminder doesn't come through. Administrators can also <a href="intune-app-configuration.html">set the reminder centrally with an Intune app configuration policy</a>.</p></div>
   <div class="card feature"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><h3>Per-device history</h3><p>Every device keeps its own 12-month reboot history and monthly heatmap, viewable on that device.</p></div>
   <div class="card feature"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><h3>Fits Managed Home Screen</h3><p>Works as one more tile in a locked-down, single-purpose or multi-app kiosk configuration.</p></div>
 </section>
@@ -352,14 +352,9 @@ a{color:var(--green)}
 <section class="card" aria-labelledby="related">
   <h2 id="related">Related reading</h2>
   <ul class="related-list">
-    <li><a href="android-reboot-notification.html">Android Reboot Notification</a> — how the configurable reminder works, for one phone or a whole fleet.</li>
-    <li><a href="intune-shared-devices.html">Intune deployment guide</a> — step-by-step setup with Managed Home Screen.</li>
-    <li><a href="android-kiosk-monitoring.html">Android Kiosk Monitoring</a> — the same idea applied to single-purpose kiosks.</li>
-    <li><a href="android-uptime-monitoring.html">Android Uptime Tracker</a> — how the on-device uptime signal works.</li>
-    <li><a href="android-device-uptime-report.html">Android Reboot History &amp; Uptime Report</a> — what a per-device report actually contains.</li>
-    <li><a href="check-last-reboot-android.html">How to check when your Android phone was last restarted</a> — three ways, from settings to automatic tracking.</li>
-    <li><a href="does-android-keep-reboot-history.html">Does Android keep a reboot history?</a> — what Android records, and what it doesn't.</li>
+    <li><a href="android-kiosk-monitoring.html">Android Kiosk Monitoring</a> — keeping unattended kiosks and signage stable.</li>
     <li><a href="android-multi-app-kiosk-intune.html">Android multi-app kiosk with Intune</a> — a setup guide for Managed Home Screen.</li>
+    <li><a href="android-reboot-notification.html">Android Reboot Notification</a> — how the 3, 7 or 14-day reminder works.</li>
   </ul>
 </section>
 

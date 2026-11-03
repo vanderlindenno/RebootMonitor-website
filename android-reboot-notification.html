@@ -219,20 +219,16 @@ a{color:var(--green)}
   <p class="lead">One screen, four options, no ambiguity about what's currently active.</p>
   <div class="phones" style="margin-top:16px">
     <figure class="shot">
-      <img src="001.png" width="525" height="1167" alt="RebootMonitor Android uptime monitor dashboard showing device status, current uptime and the last reboot time" loading="lazy" decoding="async">
-      <figcaption>The dashboard tip follows whatever interval is chosen.</figcaption>
+      <picture><source srcset="screenshot1.webp" type="image/webp"><img src="screenshot1.png" width="525" height="1167" alt="RebootMonitor dashboard showing the status, current uptime, the number of reboots and the reboot times of the last 7 days" loading="lazy" decoding="async"></picture>
+      <figcaption>The status follows whichever reminder interval is chosen.</figcaption>
     </figure>
     <figure class="shot">
-      <img src="002.png" width="525" height="1167" alt="RebootMonitor reboot tracker with reboot history, a monthly heatmap and uptime history overview" loading="lazy" decoding="async">
+      <picture><source srcset="screenshot2.webp" type="image/webp"><img src="screenshot2.png" width="525" height="1167" alt="RebootMonitor reboot history with a summary, a monthly heatmap of reboots per day and a monthly overview" loading="lazy" decoding="async"></picture>
       <figcaption>Full reboot history, so you can see how the device has been doing.</figcaption>
     </figure>
     <figure class="shot">
-      <img src="003.png" width="525" height="1167" alt="RebootMonitor settings with the reboot reminder options (3, 7 or 14 days, or off), a battery optimization shortcut and a homescreen widget, for device reboot monitoring on personal phones, kiosks and Intune-managed fleets" loading="lazy" decoding="async">
+      <picture><source srcset="screenshot3.webp" type="image/webp"><img src="screenshot3.png" width="525" height="1167" alt="RebootMonitor settings with the reboot reminder options (3, 7 or 14 days, or off), a battery optimization shortcut and a homescreen widget" loading="lazy" decoding="async"></picture>
       <figcaption>7 days is selected and marked as recommended by default.</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="004.png" width="525" height="1167" alt="RebootMonitor app information dialog with version, install date and a support link" loading="lazy" decoding="async">
-      <figcaption>Quick access to app info and support, right from the dashboard.</figcaption>
     </figure>
   </div>
 </section>
@@ -251,7 +247,7 @@ a{color:var(--green)}
     <ul class="check-list">
       <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><span>Every shared or kiosk device gets its own voice, without a server-side dashboard an admin has to watch.</span></li>
       <li><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg><span>Deployed via Microsoft Intune as a Managed Google Play app — see the <a href="intune-shared-devices.html">Intune deployment guide</a>.</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><span>An Intune app configuration policy sets the reminder (on or off, 3, 7 or 14 days) for every device at once. With a license key it can also hide the settings and website buttons &mdash; see <a href="intune-shared-devices.html#configure">how to configure RebootMonitor from Intune</a>.</span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><span>An Intune app configuration policy sets the reminder (on or off, 3, 7 or 14 days) for every device at once. With a license key it can also hide the settings and website buttons &mdash; see <a href="intune-app-configuration.html">how to configure RebootMonitor from Intune</a>.</span></li>
       <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>On Samsung fleets, an admin can manage battery optimization centrally through the Samsung Knox Service Plugin (OEMConfig), instead of relying on the in-app shortcut per device.</span></li>
     </ul>
   </section>
@@ -280,13 +276,9 @@ a{color:var(--green)}
 <section class="card" aria-labelledby="related">
   <h2 id="related">Related reading</h2>
   <ul class="related-list">
-    <li><a href="intune-shared-devices.html">Intune deployment guide</a> — step-by-step setup with Managed Home Screen.</li>
-    <li><a href="intune-shared-device-monitoring.html">Android Reboot Monitoring for Microsoft Intune</a> — the decentralized monitoring model behind it.</li>
-    <li><a href="android-kiosk-monitoring.html">Android Kiosk Monitoring</a> — the same reminder, applied to unattended kiosks.</li>
-    <li><a href="android-reboot-tracking.html">Android Reboot Tracker</a> — how every restart gets logged automatically.</li>
-    <li><a href="check-last-reboot-android.html">How to check when your Android phone was last restarted</a> — three ways, from settings to automatic tracking.</li>
-    <li><a href="does-android-keep-reboot-history.html">Does Android keep a reboot history?</a> — what Android records, and what it doesn't.</li>
     <li><a href="how-often-restart-android-phone.html">How often should you restart an Android phone?</a> — a simple routine that works.</li>
+    <li><a href="android-reboot-tracking.html">Android Reboot Tracker</a> — how every restart is logged automatically.</li>
+    <li><a href="fix-delayed-reminders.html">Reminders may be delayed? The fix</a> — the battery setting behind late reminders.</li>
   </ul>
 </section>
 

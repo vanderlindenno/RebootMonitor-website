@@ -242,6 +242,7 @@
 <ul class="path-links">
 <li><a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en" lang="en">Deployment guide: Microsoft Intune and Managed Home Screen</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span></li>
 <li><a href="https://rebootmonitor.com/intune-shared-device-monitoring.html" hreflang="en" lang="en">Reboot monitoring for shared device fleets</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span></li>
+<li><a href="https://rebootmonitor.com/intune-app-configuration.html" hreflang="en" lang="en">Configure RebootMonitor with an Intune policy</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span></li>
 <li><a href="https://rebootmonitor.com/android-multi-app-kiosk-intune.html" hreflang="en" lang="en">Setup guide: Android multi-app kiosk with Intune</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span></li>
 </ul>
 </div>
@@ -285,7 +286,7 @@
 <div class="screens">
 <picture><source srcset="/screenshot1.webp" type="image/webp"><img src="/screenshot1.png" width="525" height="1167" alt="RebootMonitor डैशबोर्ड, जिसमें स्थिति, मौजूदा अपटाइम, रीबूट वाले दिन और पिछले 7 दिनों के रीबूट का समय दिख रहा है" loading="lazy" decoding="async"></picture>
 <picture><source srcset="/screenshot2.webp" type="image/webp"><img src="/screenshot2.png" width="525" height="1167" alt="RebootMonitor रीबूट इतिहास, जिसमें सारांश, प्रति दिन रीबूट का मासिक कैलेंडर हीटमैप और मासिक अवलोकन है" loading="lazy" decoding="async"></picture>
-<picture><source srcset="/screenshot_settings_row.webp" type="image/webp"><img src="/screenshot_settings_row.png" width="525" height="1167" alt="RebootMonitor सेटिंग्स, जिनमें कॉन्फ़िगर किया जा सकने वाला रीबूट रिमाइंडर, बैटरी ऑप्टिमाइज़ेशन शॉर्टकट और होम स्क्रीन विजेट जोड़ने का विकल्प है" loading="lazy" decoding="async"></picture>
+<picture><source srcset="/screenshot3.webp" type="image/webp"><img src="/screenshot3.png" width="525" height="1167" alt="RebootMonitor सेटिंग्स, जिनमें कॉन्फ़िगर किया जा सकने वाला रीबूट रिमाइंडर, बैटरी ऑप्टिमाइज़ेशन शॉर्टकट और होम स्क्रीन विजेट जोड़ने का विकल्प है" loading="lazy" decoding="async"></picture>
 </div>
 </section>
 
@@ -316,11 +317,6 @@
 </div>
 </section>
 
-<section class="card" aria-labelledby="mdm">
-<h2 id="mdm">साझा डिवाइस और MDM वातावरण के लिए बनाया गया</h2>
-<p>RebootMonitor को Microsoft Intune जैसे MDM समाधानों से प्रबंधित साझा Android डिवाइस के लिए बनाया गया है। उपयोगकर्ता देख सकते हैं कि डिवाइस आख़िरी बार कब रीस्टार्ट हुआ था और चाहें तो रिमाइंडर पा सकते हैं &mdash; डिफ़ॉल्ट रूप से 7 दिन, या 3 या 14 दिन, या बंद। यह निजी फ़ोन पर भी उतना ही उपयोगी है। इसे कैसे तैनात करें, यह <a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en">Intune गाइड</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> में बताया गया है।</p>
-</section>
-
 <section class="card" aria-labelledby="faq">
 <h2 id="faq">अक्सर पूछे जाने वाले प्रश्न</h2>
 <details><summary>मैं कैसे देखूँ कि मेरा Android फ़ोन आख़िरी बार कब रीस्टार्ट हुआ था?</summary><p>RebootMonitor खोलें: डैशबोर्ड आख़िरी रीस्टार्ट का समय और डिवाइस कितनी देर से चल रहा है, यह दिखाता है। हर रीस्टार्ट अपने आप दर्ज होता है, इसलिए आपको पूरा इतिहास और मासिक हीटमैप भी मिलता है। दूसरे तरीके हमारी <a href="https://rebootmonitor.com/check-last-reboot-android.html" hreflang="en">Android का आख़िरी रीबूट जाँचने की गाइड</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> में बताए गए हैं।</p></details>
@@ -340,14 +336,8 @@
 <li><a href="https://rebootmonitor.com/android-reboot-tracking.html" hreflang="en" lang="en">Android Reboot Tracker</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — हर रीस्टार्ट अपने आप कैसे दर्ज होता है।</li>
 <li><a href="https://rebootmonitor.com/android-uptime-monitoring.html" hreflang="en" lang="en">Android Uptime Tracker</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — डिवाइस पर ही लाइव अपटाइम ट्रैक करना।</li>
 <li><a href="https://rebootmonitor.com/android-device-uptime-report.html" hreflang="en" lang="en">Android Reboot History &amp; Uptime Report</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — पूरा इतिहास और हीटमैप पढ़ना।</li>
-<li><a href="https://rebootmonitor.com/check-last-reboot-android.html" hreflang="en" lang="en">How to check when your Android phone was last restarted</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — तीन तरीके, सेटिंग्स से लेकर स्वचालित ट्रैकिंग तक।</li>
-<li><a href="https://rebootmonitor.com/does-android-keep-reboot-history.html" hreflang="en" lang="en">Does Android keep a reboot history?</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — Android क्या दर्ज करता है, और क्या नहीं।</li>
-<li><a href="https://rebootmonitor.com/how-often-restart-android-phone.html" hreflang="en" lang="en">How often should you restart an Android phone?</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — एक सरल दिनचर्या जो काम करती है।</li>
 <li><a href="https://rebootmonitor.com/android-reboot-notification.html" hreflang="en" lang="en">Android Reboot Notification</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — 3/7/14 दिन का कॉन्फ़िगर किया जा सकने वाला रिमाइंडर कैसे काम करता है, निजी फ़ोन और MDM डिवाइस बेड़े दोनों के लिए।</li>
 <li><a href="https://rebootmonitor.com/android-kiosk-monitoring.html" hreflang="en" lang="en">Android Kiosk Monitoring</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — बिना निगरानी वाले कियोस्क और साइनेज को स्थिर रखना।</li>
-<li><a href="https://rebootmonitor.com/android-multi-app-kiosk-intune.html" hreflang="en" lang="en">Android multi-app kiosk with Intune</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — Managed Home Screen के लिए सेटअप गाइड।</li>
-<li><a href="https://rebootmonitor.com/intune-shared-devices.html" hreflang="en" lang="en">RebootMonitor with Microsoft Intune</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — Managed Home Screen के साथ साझा डिवाइस पर तैनाती।</li>
-<li><a href="https://rebootmonitor.com/intune-shared-device-monitoring.html" hreflang="en" lang="en">Android Reboot Monitoring for Microsoft Intune</a><span class="en" lang="en" title="अंग्रेज़ी भाषा का पेज">EN</span> — प्रबंधित डिवाइस बेड़े में रीबूट की सेहत की निगरानी।</li>
 </ul>
 </section>
 
