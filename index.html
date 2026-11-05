@@ -359,7 +359,7 @@
 
 <footer class="footer">
 <div>© 2026 Nordic Appworks • RebootMonitor</div>
-<nav aria-label="Footer"><a href="https://rebootmonitor.com/">Home</a><a href="https://rebootmonitor.com/about.html">About</a><a href="https://rebootmonitor.com/intune-shared-devices.html">Intune guide</a><a href="https://rebootmonitor.com/privacy.html">Privacy Policy</a><a href="https://updatemonitor.app/">UpdateMonitor</a><a href="https://play.google.com/store/apps/details?id=app.rebootmonitor.mobile" target="_blank" rel="noopener">Google Play</a></nav>
+<nav aria-label="Footer"><a href="https://rebootmonitor.com/">Home</a><a href="https://rebootmonitor.com/about.html">About</a><a href="https://rebootmonitor.com/intune-shared-devices.html">Intune guide</a><a href="https://rebootmonitor.com/privacy.html">Privacy Policy</a><a href="https://rebootmonitor.com/terms.html">Terms of Service</a><a href="https://updatemonitor.app/">UpdateMonitor</a><a href="https://play.google.com/store/apps/details?id=app.rebootmonitor.mobile" target="_blank" rel="noopener">Google Play</a></nav>
 </footer>
 
 <script>const contactForm=document.getElementById('contact-form');contactForm.addEventListener('submit',function(e){e.preventDefault();const data=new FormData(contactForm);fetch(contactForm.action,{method:contactForm.method,body:data,headers:{'Accept':'application/json'}}).then(function(response){if(response.ok){contactForm.style.display='none';document.getElementById('contact-success').style.display='block';}else{response.json().then(function(json){var msg=json&&json.errors?json.errors.map(function(e){return e.message}).join(', '):'Something went wrong. Please try again later.';alert(msg);});}}).catch(function(){alert('Something went wrong. Please try again later.');});});</script>
