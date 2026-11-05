@@ -318,6 +318,7 @@ a{color:var(--green)}
   <p style="margin:18px 0 6px"><strong>Price on request.</strong> The price depends on the number of devices. Use the contact form on the home page and tell us the name of your organization and roughly how many devices you manage. We reply with a quote, and send you the key to paste into the policy once the license is arranged.</p>
   <p style="margin:12px 0 0"><a class="btn" href="https://rebootmonitor.com/#contact">Request a quote</a></p>
   <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p><strong>If you hide the settings, manage battery optimization from the device side.</strong> Users can no longer open the battery optimization shortcut from the app. On Samsung devices, deploy the <strong>Samsung Knox Service Plugin</strong> (OEMConfig) through Intune and use its battery optimization settings to exempt RebootMonitor (package <code>app.rebootmonitor.mobile</code>) across the whole fleet. For other brands, use the manufacturer's OEMConfig app where it offers such a setting. That way background reminders stay reliable without any action from the user.</p></div>
+  <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>Try the policy on a pilot group first.</strong> Assign it to a few devices of each model before the whole fleet, and check that reminders and hidden buttons work as intended. See <a href="intune-shared-devices.html#pilot">Test first, then roll out</a>.</p></div>
 </section>
 
 <section class="card faq" aria-labelledby="faq">

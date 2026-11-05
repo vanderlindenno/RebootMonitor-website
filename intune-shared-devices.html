@@ -444,6 +444,20 @@ a{color:var(--green)}
   <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p>Without step 3 the app is installed but invisible. Reminders only start after the chosen interval (7 days by default) has passed since installation, so don't expect notifications right after the rollout.</p></div>
 </section>
 
+<section class="card" aria-labelledby="pilot">
+  <h2 id="pilot">Test first, then roll out</h2>
+  <p class="lead">No two Android devices behave exactly alike. Device makers adapt Android in their own way, and battery saving, kiosk settings and Intune policies all affect how an app runs in the background. We test RebootMonitor on several Android versions, but we cannot test every model in your fleet. That is why we ask every organization to start small.</p>
+  <ol class="steps">
+    <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Pick a pilot group</h3><p>Choose a few devices of each model and Android version you use, ideally in a team that is happy to give feedback.</p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-phone-check"/></svg><h3>Check the basics</h3><p>Restart each pilot device once and check that the restart shows up in the app and on the widget.</p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><h3>Wait for a reminder</h3><p>Set the reminder to 3 days for the pilot, and check that it really arrives and can be seen in Managed Home Screen.</p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><h3>Test your policy</h3><p>Assign your app configuration policy and license key to the pilot group first, and check that the settings and hidden buttons look the way you intended.</p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><h3>Roll out in stages</h3><p>When everything works, widen the assignment group by group instead of switching on the whole fleet at once.</p></li>
+    <li><svg class="icon" aria-hidden="true"><use href="#i-update"/></svg><h3>Test again after big updates</h3><p>Keep the pilot group. After a major Android or firmware update, check RebootMonitor there before the update reaches every device.</p></li>
+  </ol>
+  <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p><strong>Something not working on a particular model?</strong> Send us the device model and Android version through the <a href="https://rebootmonitor.com/#contact">contact form</a> and we'll look into it. Testing before a full rollout is also part of our <a href="https://rebootmonitor.com/terms.html">terms of service</a>.</p></div>
+</section>
+
 <section class="card" aria-labelledby="configure">
   <h2 id="configure">Optional: configure RebootMonitor from Intune</h2>
   <p class="lead">An app configuration policy sets the reboot reminder on every device from one place. It can also grant the notification permission automatically and, with a license key, hide the settings and website buttons.</p>
